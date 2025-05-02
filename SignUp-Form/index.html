@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TOP - Project: Sign-up Form</title>
+</head>
+
+<body>
+    <main class="main">
+        <section class="left">
+            <div class="strip">
+                <img src="./img/odin-lined.png" class="logo" alt="">
+                <h1>ODIN</h1>
+            </div>
+        </section>
+
+        <section class="right">
+
+            <div class="text">
+                <p>This is not real online service! You know you need something like this in your life to help you
+                    realize your deepest dreams. <br>Sign up <i>now</i> to get started.</p>
+                <p>You <i>know</i> you want to.</p>
+            </div>
+
+            <form class="form" action="submit" method="post">
+
+                <div class="form-1">
+                    <h2>Let's do this !</h2>
+
+                    <div class="flex">
+                        <div class="flex-col">
+                            <label for="firstname">FIRST NAME</label>
+                            <input type="text" name="firstname" id="firstname" placeholder="Thor">
+                        </div>
+
+                        <div class="flex-col">
+                            <label for="lastname">LAST NAME</label>
+                            <input type="text" name="lastname" id="lastname" placeholder="Odinson">
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="flex-col">
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+
+                        <div class="flex-col">
+                            <label for="number">PHONE NUMBER</label>
+                            <input type="tel" name="number" id="number">
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="flex-col">
+                            <label for="password">PASSWORD <span>*</span></label>
+                            <input type="password" name="password" id="password" required>
+                        </div>
+
+                        <div class="flex-col">
+                            <label for="password-conf">CONFIRM PASSWORD <span>*</span></label>
+                            <input type="password" name="password-conf" id="password-conf" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-2">
+                    <button class="btn" type="submit">Create Account</button>
+                    <p>Already have an account ? <span>Log in</span></p>
+                </div>
+            </form>
+
+        </section>
+    </main>
+</body>
+
+</html>
