@@ -1,0 +1,71 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  background: lightgray;
+  display: grid;
+  grid-template: auto 1fr auto auto auto / auto auto auto auto;
+  gap: 15px;
+  text-align: center;
+  max-height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
+  max-width: 100vw;
+  /* overflow: hidden; */
+}
+
+.container div {
+  padding: 15px;
+  font-size: 32px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: white;
+  border-radius: 15px;
+}
+
+.header {
+  background-color: #006157;
+  /* grid-area: header; */
+  grid-area: 1 / 1 / 2 / 5;
+}
+
+.sidebar {
+  background-color: #005B94;
+  /* grid-area: sidebar; */
+  grid-area: 2 / 1 / 5 / 2;
+}
+
+.nav {
+  background-color: #642cde;
+  /* grid-area: nav; */
+  grid-area: 2 / 2 / 3 / 5;
+}
+
+.article {
+  background-color: #7E1DC3;
+  /* grid-area: article; */
+  grid-area: 3 / 2 / 5 / 5;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  /* overflow-y: auto;  Ajouté : permet de scroller si le contenu est trop grand */
+  max-height: 100%;  /* Ajouté : empêche l'article de dépasser sa zone */
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #393f4d;
+  /* grid-area: footer; */
+  grid-area: 5 / 1 / 6 / 5;
+}
+
+.article p {
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: white;
+  text-align: left;
+  word-wrap: break-word;
+}
