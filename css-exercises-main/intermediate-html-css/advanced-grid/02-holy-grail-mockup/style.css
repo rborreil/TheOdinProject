@@ -3,8 +3,25 @@
   padding: 0;
 }
 
+/*
+### Self Check
+- The header and footer span across both columns
+- The sidebar only spans across the first column
+- The nav and article elements only span across the second column
+*/
+
+
+/* - The container element has two columns
+- The container's second column is 4 times larger than the first column
+- The container element has a gap of 4px */
 .container {
   text-align: center;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 10vh 5vh auto auto auto auto 5vh;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 .container div {
@@ -15,8 +32,26 @@
   color: white;
 }
 
+/* - The header element has two columns */
 .header {
   background-color: #393f4d;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-items: start;
+  grid-template-columns: 1fr 2fr;
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+
+/* - The `ul` inside the menu element contains another grid */
+.menu ul {
+  display: grid;
+  gap: 5vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+  align-items: center;
+  justify-items: center;
 }
 
 .menu ul,
@@ -24,28 +59,57 @@
   font-size: 16px;
 }
 
+
+/* - The sidebar element has a gap of 50px */
 .sidebar {
   background-color: #C50208;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-area: 2 / 1 / 7 / 2;
+  gap: 50px;
+
 }
 
+/* - The text elements in the sidebar are centered with grid */
 .sidebar .photo {
   background-color: white;
   color: black;
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
-
 
 .sidebar .side-content {
   background-color: white;
   color: black;
   font-size: 16px;
   font-weight: normal;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.container div.nav {
+  padding: 0;
 }
 
 .nav {
   background-color: #C50208;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+/* - The `ul` inside the nav element contains another grid */
+.nav ul {
+  display: grid;
+  align-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-area: 1 / 1 / 2 / 4;
+  list-style-type: none;
 }
 
 .nav ul li {
@@ -53,8 +117,16 @@
   text-transform: uppercase;
 }
 
+/* - The article element should set grid columns using `repeat` along with the `auto-fit` and `minmax` properties
+- The article columns should have a minimum value of 250px and a maximum of 1fr unit
+- The article element has a gap of 15px */
 .article {
   background-color: #bccbde;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-area: 3 / 2 / 7 / 3;
+  gap: 15px;
 }
 
 .article p {
@@ -64,9 +136,11 @@
   text-align: left;
 }
 
+/* - The card elements inside the article container have a height of 200px */
 .article .card {
   background-color: #FFFFFF;
   color: black;
+  height: 200px;
   text-align: center;
 }
 
@@ -83,6 +157,10 @@
 
 .footer {
   background-color: #393f4d;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-area: 7 / 1 / 8 / 3;
+  align-content: center;
 }
 
 .footer p {
