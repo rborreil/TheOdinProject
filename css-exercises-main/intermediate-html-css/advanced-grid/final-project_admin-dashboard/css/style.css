@@ -9,6 +9,7 @@
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
   margin: 0;
   padding: 0;
 }
@@ -16,7 +17,7 @@ body {
 .dashboard {
   background-color: white;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr 3fr;
   grid-template-areas: "sidebar header" "sidebar main";
   gap: 2px;
@@ -25,6 +26,7 @@ body {
 
 .header {
   background-color: darkgoldenrod;
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5);
   grid-area: header;
 }
 
@@ -32,12 +34,11 @@ body {
   background-color: #1992d4;
   color: white;
   display: grid;
-  grid-template-rows: 1fr 4fr 2fr;
+  font-weight: 500;
+  gap: 20px;
+  grid-template-rows: 1fr 4fr 6fr;
   grid-area: sidebar;
   padding: 20px;
-}
-.sidebar .sidebar-top {
-  max-height: 70%;
 }
 .sidebar svg {
   fill: white;
@@ -46,19 +47,20 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .sidebar h1 svg {
   width: 2.5rem;
 }
-.sidebar .header-1,
-.sidebar .header-2 {
+.sidebar .sidebar-middle,
+.sidebar .sidebar-bottom {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-.sidebar ul {
+  gap: 15px;
   margin-left: 10px;
+}
+.sidebar .sidebar-middle {
+  margin-bottom: 20px;
 }
 .sidebar li {
   display: flex;
@@ -72,7 +74,6 @@ body {
 }
 
 .main-content {
-  background-color: darkred;
   grid-area: main;
 }
 
